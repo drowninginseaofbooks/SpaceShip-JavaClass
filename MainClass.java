@@ -1,6 +1,6 @@
-import javax.swing.*;
-import java.awt.event.*;
 import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 class MainClass extends JFrame{
 
@@ -8,10 +8,14 @@ class MainClass extends JFrame{
 
         JButton leftButton = new JButton("Left");
         JButton rightButton = new JButton("Right");
+        JButton upButton = new JButton("Up");
+        JButton downButton = new JButton("Down");
 
         JPanel controls = new JPanel();
         controls.add(leftButton);
         controls.add(rightButton);
+        controls.add(upButton);
+        controls.add(downButton);
 
         drawSpaceShip ship = new drawSpaceShip();
         ship.setPreferredSize(new Dimension(500, 500));
@@ -31,6 +35,18 @@ class MainClass extends JFrame{
         rightButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
                 ship.moveRight();
+            }
+        });
+
+        downButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                ship.moveDown();
+            }
+        });
+
+        upButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e){
+                ship.moveUp();
             }
         });
 
