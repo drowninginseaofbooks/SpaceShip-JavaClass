@@ -1,7 +1,6 @@
-import java.awt.BorderLayout;
-import java.awt.Dimension;
-import java.awt.event.*;
 import javax.swing.*;
+import java.awt.event.*;
+import java.awt.*;
 
 class MainClass extends JFrame{
 
@@ -25,13 +24,13 @@ class MainClass extends JFrame{
 
         leftButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                System.out.println("Left");
+                ship.moveLeft();
             }
         });
 
         rightButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e){
-                System.out.println("Right");
+                ship.moveRight();
             }
         });
 
